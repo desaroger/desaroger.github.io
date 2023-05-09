@@ -1,20 +1,65 @@
-﻿.header .container {
-    border-top: 0;
-    padding-bottom: 7.5rem;
+﻿#header {
     padding-top: 7.5rem;
+    padding-bottom: 4.5rem;
     position: relative;
-    text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    font-size: 2rem;
+.container {
+    padding-bottom: 10rem;
 }
 
-.li-title {
-    font-size: 6rem;
+section {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+section h2 {
+    font-size: 4rem;
     font-weight: 700;
     display: block;
     opacity: 0.2;
     text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.waving {
+    display: inline-block;
+    cursor: default;
+}
+
+.waving:hover {
+    animation-name: wave-animation;
+    animation-duration: 3.0s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 50%;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate( 0.0deg)
+    }
+    10% {
+        transform: rotate(14.0deg)
+    }
+    20% {
+        transform: rotate(-8.0deg)
+    }
+    30% {
+        transform: rotate(14.0deg)
+    }
+    40% {
+        transform: rotate(-4.0deg)
+    }
+    50% {
+        transform: rotate(10.0deg)
+    }
+    60% {
+        transform: rotate( 0.0deg)
+    }
+    100% {
+        transform: rotate( 0.0deg)
+    }
 }
