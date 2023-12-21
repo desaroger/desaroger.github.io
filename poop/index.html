@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Poop Game Beta</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <section id="header">
+      <h1>The 💩 game!</h1>
+    </section>
+
+    <section>
+        <input type="file" accept="text/plain, application/zip" onChange="onFileUploaded(this.files[0])"/>
+    </section>
+
+    <section>
+        <input id="date" type="text" />
+        <pre id="pre">
+
+        </pre>
+
+        <div id="gd"></div>
+    </section>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/whatsapp-chat-parser/dist/index.global.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.1.min.js" charset="utf-8" defer></script>
+  <script src="main.js" defer></script>
+
+</body>
+</html>
