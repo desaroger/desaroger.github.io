@@ -27,9 +27,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./react-test
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,7 +35,6 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: 'react-test'
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -48,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './react-test-output'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
